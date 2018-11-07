@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tin nổi bật"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorPrimary"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/home_viewpager">
+
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch thi đấu"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thứ bảy, 10 tháng 10 2018"
+                    android:gravity="center"
+                    android:id="@+id/tv_time"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycle_home">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/view_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_margin="16dp"
+                android:text="XEM TẤT CẢ"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_id">
+
+            </com.google.android.gms.ads.AdView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vua phá lưới và kiến tạo"
+                android:gravity="center"
+                android:textSize="22dp"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"/>
+
+            <TableRow android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_weight="1">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_vua_pha_luoi"
+                        android:layout_width="match_parent"
+                        android:layout_height="84dp"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quang Hải"
+                        android:id="@+id/tv_vua_pha_luoi"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7 bàn"
+                        android:id="@+id/tv_ban_vua_pha_luoi"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_weight="1">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        app:civ_border_width="1dp"
+                        android:id="@+id/img_vua_kien_tao"
+                        app:civ_border_color="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quang Hải"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14dp"
+                        android:id="@+id/tv_vua_kien_tao"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5 Kiến tạo"
+                        android:textSize="20dp"
+                        android:id="@+id/tv_ban_vua_kien_tao"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+
+            </TableRow>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

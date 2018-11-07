@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TableRow android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="?attr/actionBarSize">
+
+
+                    <ImageView android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:padding="16dp"
+                        android:src="@drawable/ball"/>
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/tv_toolbar"
+                        android:text="AFF SUZUKI CUP"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/white"/>
+
+                    <ImageView android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:padding="16dp"
+                        android:src="@drawable/ball"/>
+
+
+                </TableRow>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/main_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v4.view.ViewPager>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:id="@+id/navigation_home"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/img_home"
+                    android:src="@drawable/ic_home"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:id="@+id/navigation_ketqua"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/img_ketqua"
+                    android:src="@drawable/ic_ketqua" />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:id="@+id/navigation_bxh"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="16dp"
+                    android:id="@+id/img_bxh"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_bxh" />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:id="@+id/navigation_thanhvien"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="16dp"
+                    android:id="@+id/img_doibong"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_thanhvien" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

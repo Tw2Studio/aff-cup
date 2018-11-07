@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "495803487248",
+    "firebase_url": "https://aff-cup-26e61.firebaseio.com",
+    "project_id": "aff-cup-26e61",
+    "storage_bucket": "aff-cup-26e61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495803487248:android:779943e624e5d8d4",
+        "android_client_info": {
+          "package_name": "com.tw2.affsuzukicup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495803487248-1afq5bitb6k0gtl2uqbab38jv138ti6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tw2.affsuzukicup",
+            "certificate_hash": "f896536e3ac3b2a3500865a5812d182107f47e48"
+          }
+        },
+        {
+          "client_id": "495803487248-pr5vec976gfv95jqb96m27601uouq0ie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUOthlEtaF6TqGMrIfrqtNTLgJNojV4Wg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495803487248-pr5vec976gfv95jqb96m27601uouq0ie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
