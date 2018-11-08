@@ -25,6 +25,8 @@ import com.tw2.affsuzukicup.model.ContainerKetQua;
 import com.tw2.affsuzukicup.model.KetQua;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class KetQuaFragment extends Fragment {
@@ -61,8 +63,15 @@ public class KetQuaFragment extends Fragment {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 ContainerKetQua containerKetQua = dataSnapshot.getValue(ContainerKetQua.class);
-
                 list.add(containerKetQua);
+
+                Collections.sort(list, new Comparator<ContainerKetQua>() {
+                    @Override
+                    public int compare(final ContainerKetQua object1, final ContainerKetQua object2) {
+                        return Integer.parseInt(object2.getNumber()) - Integer.parseInt(object1.getNumber());
+                    }
+                });
+
                 adapter = new ContainerKetQuaAdapter(list, true);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();

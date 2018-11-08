@@ -16,6 +16,26 @@ public class ContainerKetQua {
     @SerializedName("ngay")
     private String ngay;
 
+    @NonNull
+    @SerializedName("number")
+    private String number;
+
+    @NonNull
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(@NonNull String number) {
+        this.number = number;
+    }
+
+    public ContainerKetQua(@NonNull List<KetQua> tran, @NonNull String ngay, @NonNull String number) {
+
+        this.tran = tran;
+        this.ngay = ngay;
+        this.number = number;
+    }
+
     public ContainerKetQua(List<KetQua> tran, String ngay) {
         this.tran = tran;
         this.ngay = ngay;
