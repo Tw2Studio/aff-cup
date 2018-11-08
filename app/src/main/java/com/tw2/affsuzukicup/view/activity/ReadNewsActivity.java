@@ -8,16 +8,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.squareup.picasso.Picasso;
 import com.tw2.affsuzukicup.R;
 
 public class ReadNewsActivity extends AppCompatActivity implements View.OnClickListener {
     private WebView webView;
-    private String link;
+    private String title, text, image;
     private AdView banner;
+    private TextView tvTitle, tvText;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +31,9 @@ public class ReadNewsActivity extends AppCompatActivity implements View.OnClickL
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.color_status_bar));
         }
-        link = getIntent().getStringExtra("LINK");
+        text = getIntent().getStringExtra("TEXT");
+        title = getIntent().getStringExtra("TITLE");
+        image = getIntent().getStringExtra("IMAGE");
         initView();
         initAds();
     }
@@ -39,12 +46,13 @@ public class ReadNewsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initView() {
-        webView = (WebView) findViewById(R.id.webview);
+        tvTitle = (TextView) findViewById(R.id.tv_news);
+        tvText = (TextView) findViewById(R.id.tv_text_news);
+        imageView = (ImageView) findViewById(R.id.img_news);
 
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl(link);
-
+        tvTitle.setText(title);
+        tvText.setText("   "+text);
+        Picasso.get().load(image).into(imageView);
 
         findViewById(R.id.btn_back).setOnClickListener(this);
     }

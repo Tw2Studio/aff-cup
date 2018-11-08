@@ -68,7 +68,9 @@ public class HomeViewPagerAdapter extends PagerAdapter {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, ReadNewsActivity.class);
-                    intent.putExtra("LINK", itemHomePager.getLink());
+                    intent.putExtra("TITLE", itemHomePager.getName());
+                    intent.putExtra("IMAGE", itemHomePager.getImage());
+                    intent.putExtra("TEXT", itemHomePager.getLink());
                     context.startActivity(intent);
                 }
             });

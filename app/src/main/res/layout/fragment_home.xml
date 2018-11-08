@@ -158,7 +158,7 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="84dp"
                         app:civ_border_width="1dp"
                         android:id="@+id/img_vua_kien_tao"
                         app:civ_border_color="@android:color/white" />
